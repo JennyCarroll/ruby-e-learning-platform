@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
-  # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
-
-  # Defines the root path route ("/")
-  # root "articles#index"
+  # endpoint that specifies where we want out root page of the application to be directed to
+  root "static_pages#landing_page"
+  # removes static_pages from the URL and only shows privacy_policy
+  get 'privacy_policy', to: 'static_pages#privacy_policy'
+  # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end
